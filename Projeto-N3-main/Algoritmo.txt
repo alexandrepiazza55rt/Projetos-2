@@ -1,0 +1,78 @@
+Algoritmo:
+
+Pegar o elemento de busca e todas as imagens
+Obter o elemento do modal, o conteúdo do modal e o botão de fechar o modal
+Criar uma função não simultânea para buscar a descrição de um personagem
+Para cada imagem:
+
+a. Obter o nome do personagem da imagem
+b. Adicionar o nome do personagem como atributo "data-character" na imagem
+c. Adicionar um ouvinte de clique na imagem para exibir o modal com a descrição do personagem correspondente
+
+Adicionar um ouvinte de clique no botão de fechar para fechar o modal
+Adicionar um ouvinte de clique na janela para fechar o modal quando clicar fora dele
+Adicionar um ouvinte de entrada na caixa de busca para filtrar as imagens de acordo com o texto digitado na caixa de busca.
+
+-------------------------------------------------
+
+
+Declaraçao de variaveis
+
+var searchBox, images, modal, modalContent, span
+
+Função para buscar descrição do personagem
+
+função buscarDescricao(characterName)
+tentar
+Faz uma requisição para o arquivo JSON de descrição
+
+const responde = await fetch("descriptions.json");
+const data = await response.json();
+
+Retorna a descrição dos personagem
+retorna data[characterName];
+pegar (erro)
+
+Em caso de erro, mostre a mensagem no console
+exibirMensageDeErro("Erro ao buscar descrição:", erro);
+
+Para cada imagem de personagem
+para cada imagem em images
+
+Pegue o nome do personagem da imagem e atribui a um atributo data-charater
+var charactername = imagem.querSelector("h3").innertext;
+imagem.setAttribute("data-character", charactername);
+
+Adiciona um listener para exibir a descrição dos personagem ao clicar na imagem
+imagem.addEventListener("click", async () =>             || conferir se o arquivo Jason está na ordem
+var character = imagem.getAttribute("data-character");
+var description = await buscarDescricao(character);
+var characterImage = imagem.querySelector("img").src;
+    
+Exibe a descrição do personagem no mymodel
+
+modalContent.innerHTML = `
+<h2>${character}</h2>                           || ${variable}: é usado pra colocar o valor de uma variável em uma string
+<img src="${characterImage}" alt="${character}" /> 
+<p>${description || "Descrição não disponível"}</p>;
+modal.style.display = "block";
+);
+
+Adiciona um listener para fechar o modal
+span.addEventListener("click", () => {
+modal.style.display = "none";
+});
+
+Adiciona um listener para fechar o modal ao clicar fora dele
+window.addEventListener("click", (event) => {
+se (event.target == modal) {
+modal.style.display = "none";
+}
+});
+
+Adiciona um listener para filtrar a lista de imagens de acordo com o texto digitado na caixa de busca
+searchBox.oninput = () => {
+para cada imagem em images
+Esconde as imagens que não contêm o termo buscado
+imagem.style.display = 'none';
+........

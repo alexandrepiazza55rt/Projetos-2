@@ -1,0 +1,13 @@
+Oii querida fessora, tudo bem? 
+Melhoras para você, esse trabalho se consiste em um site básico
+onde os texto do meu Modal, está vindo de um arquivo Jason. Passado né ＼（〇_ｏ）／
+
+Esse não será um site do cosplay, estou montando ele como cosplay pra Camila não encher o saco
+Mas no final vou transformar ele em um site de politica. Tentarei pegar as imagens e informações dos politicos direto do site do www12.senado.leg.br
+
+O site ainda só possui um sistema simples de buscar personagem e ao clicar nele retorna um breve texto que está no meu jason.
+Pretendo ainda colocar mais coisas como um ranking dos politicos, Leis que "EU e obrigatóriamente a Camila" apoiamos, entre outras coisas!
+
+Não repara o arquivo algoritmo é só para eu não me perde
+
+I é isso, beijo da Anitta
